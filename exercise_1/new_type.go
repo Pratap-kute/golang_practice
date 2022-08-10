@@ -8,11 +8,12 @@
 	d.print out the value of the variable “x”
 */
 package main
+
 import "fmt"
 
 type myType int
 
-func main(){
+func main() {
 	var x myType
 	fmt.Println(x)
 	fmt.Printf("%T\n", x)
