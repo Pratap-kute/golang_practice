@@ -16,8 +16,8 @@ package main
 
 import "fmt"
 
-type jio int
-var x jio
+type myType int
+var x myType
 var y int
 
 func main() {
