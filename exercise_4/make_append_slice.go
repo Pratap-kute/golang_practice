@@ -30,9 +30,9 @@ func main() {
 		y[i] = v
 	}
 
-    for i := 0; i < len(y); i++ {
-        fmt.Println(i, y[i])
-    }
+	for i := 0; i < len(y); i++ {
+		fmt.Println(i, y[i])
+	}
 
 }
 
