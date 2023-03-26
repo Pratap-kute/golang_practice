@@ -12,7 +12,6 @@ type secretAgent struct {
 	ltk bool
 }
 
-
 // func (r receiver) identifier(parameters) (return(s)) { code }
 // method is a function with a receiver argument is most important
 func (s secretAgent) speak() {
