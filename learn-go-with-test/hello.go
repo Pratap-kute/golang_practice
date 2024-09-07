@@ -1,21 +1,38 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 const (
 	spanish            = "Spanish"
 	englishHelloPrefix = "Hello, "
 	spanishHelloPrefix = "Hola, "
+	frenchHelloPrefix  = "Bonjour, "
+	french             = "French"
 )
 
 func Hello(name, language string) string {
 	if name == "" {
 		name = "world"
 	}
-	if language == spanish {
-		return spanishHelloPrefix + name
+
+	return greetingPrefix(language) + name
+}
+
+// named return value (prefix string)
+// this will create a veriable called prefix
+// it will be assigned the "zero value". this depends on the type
+func greetingPrefix(language string) (prefix string) {
+	switch language {
+	case french:
+		prefix = frenchHelloPrefix
+	case spanish:
+		prefix = spanishHelloPrefix
+	default:
+		prefix = englishHelloPrefix
 	}
-	return englishHelloPrefix + name
+	return
 }
 
 func main() {
