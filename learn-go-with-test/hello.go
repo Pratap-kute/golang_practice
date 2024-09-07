@@ -12,6 +12,8 @@ const (
 	french             = "French"
 )
 
+// this is public function
+// due to function name is start with capital letters
 func Hello(name, language string) string {
 	if name == "" {
 		name = "world"
