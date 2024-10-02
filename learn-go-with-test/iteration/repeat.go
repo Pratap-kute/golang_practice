@@ -1,15 +1,7 @@
 package iteration
 
-const repeatCount = 5
+import "strings"
 
-func Repeat(character string) string {
-	var repeated string
-	for i := 0; i < repeatCount; i++ {
-		// += called "the Add AND assignment operator",
-		// adds the right operand to the left operand and
-		// assigns the result to left operand.
-		// It works with other types like integers.
-		repeated += character
-	}
-	return repeated
+func Repeat(character string, count int) string {
+	return strings.Repeat(character, count)
 }
