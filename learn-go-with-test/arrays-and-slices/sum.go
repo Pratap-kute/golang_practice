@@ -2,8 +2,10 @@ package main
 
 func Sum(number [5]int) int {
 	sum := 0
-	for i := 0; i < 5; i++ {
-		sum += number[i]
+	// we are using range returns two values - the index and the value.
+	// We are choosing to ignore the index value by using _ blank identifier.
+	for _, number := range number {
+		sum += number
 	}
 	return sum
 }
