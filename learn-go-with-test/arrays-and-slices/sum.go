@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func Sum(number []int) int {
 	sum := 0
 	// we are using range returns two values - the index and the value.
@@ -14,14 +12,10 @@ func Sum(number []int) int {
 
 // "...[]int" is used to accept the any lenght of slice
 func SumAll(numberToSum ...[]int) []int {
-	lengthOfNumber := len(numberToSum)
-	capasityofNumber := cap(numberToSum)
-	fmt.Printf("capacity of slice %d \n", capasityofNumber)
-	// make allows you to create a slice with a starting capacity of the len of the numbersToSum we need to work through.
-	sums := make([]int, lengthOfNumber)
+	var sums []int
 
-	for i, numbers := range numberToSum {
-		sums[i] = Sum(numbers)
+	for _, numbers := range numberToSum {
+		sums = append(sums, Sum(numbers))
 	}
 
 	return sums
