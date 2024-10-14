@@ -11,11 +11,17 @@ func Sum(number []int) int {
 }
 
 // "...[]int" is used to accept the any lenght of slice
-func SumAll(numberToSum ...[]int) []int {
+// https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/arrays-and-slices
+func SumAllTails(numberToSum ...[]int) []int {
 	var sums []int
 
 	for _, numbers := range numberToSum {
-		sums = append(sums, Sum(numbers))
+		if len(numbers) == 0 {
+			sums = append(sums, 0)
+		} else {
+			tail := numbers[1:]
+			sums = append(sums, Sum(tail))
+		}
 	}
 
 	return sums
