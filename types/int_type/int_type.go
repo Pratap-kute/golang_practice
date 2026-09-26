@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-var x int
-var y float64
+// var x int
+// var y float64
 
 func main() {
-	x = 42
-	y = 42.324567
+	x := 42
+	y := 42.324567
 	fmt.Println(x)
 	fmt.Println(y)
 	fmt.Printf("%T\n", x)
