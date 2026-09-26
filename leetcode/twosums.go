@@ -4,18 +4,18 @@ import "fmt"
 
 func twoSum(nums []int, target int) []int {
 	var target_index []int
+	seen := make(map[int]int)
 	for index, val := range nums {
-		// find_this_number := target - val
+		find_this_number := target - val
+		ind, found := seen[find_this_number]
 
-		for i, v := range nums {
-			if v+val == target && index != i {
-				target_index = append(target_index, index, i)
-				break
-			}
-		}
-		if len(target_index) == 2 {
+		if found {
+			target_index = append(target_index, ind, index)
 			break
+		} else {
+			seen[val] = index
 		}
+
 	}
 
 	return target_index
@@ -23,7 +23,7 @@ func twoSum(nums []int, target int) []int {
 
 func main() {
 	nums := []int{3, 2, 4}
-	target := 6
+	target := 7
 
 	indexoftwosum := twoSum(nums, target)
 	fmt.Println(indexoftwosum)
