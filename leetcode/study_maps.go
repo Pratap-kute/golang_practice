@@ -1,8 +1,8 @@
-package main
+package leetcode
 
 import "fmt"
 
-func main() {
+func mpas_study() {
 	seen := make(map[int]int)
 
 	seen[3] = 0
