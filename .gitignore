@@ -1,0 +1,9 @@
+# Delve debug binaries
+__debug_bin*
+
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib

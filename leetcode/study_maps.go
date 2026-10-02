@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 import "fmt"
 
@@ -13,4 +13,8 @@ func mpas_study() {
 
 	index, exists = seen[2]
 	fmt.Println(index, exists)
+}
+
+func main() {
+	mpas_study()
 }
